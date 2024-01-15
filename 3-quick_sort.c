@@ -1,6 +1,22 @@
 #include "sort.h"
 
 /**
+ * swap_ints - Swap two integers in array
+ * @a: the first integer
+ * @b: second integer
+ *
+ * Return: ALways 0
+ */
+void swap_ints(int *a, int *b)
+{
+	int tmp;
+
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
+}
+
+/**
  * lomuto_partition - Order a subset of an array
  * @array: The array of integers.
  * @size: The size of the array.
@@ -30,7 +46,7 @@ int lomuto_partition(int *array, size_t size, int left, int right)
 
 	if (array[above] > *pivot)
 	{
-		int_swap(array + above, pivot);
+		swap_ints(array + above, pivot);
 		print_array(array, size);
 	}
 
