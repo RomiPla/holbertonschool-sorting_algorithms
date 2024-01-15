@@ -29,5 +29,6 @@ void swap_ints(int *a, int *b);
 int lomuto_partition(int *array, size_t size, int left, int right);
 void lomuto_sort(int *array, size_t size, int left, int right);
 void quick_sort(int *array, size_t size);
+listint_t *swap(listint_t *node, listint_t **list);
 
 #endif
